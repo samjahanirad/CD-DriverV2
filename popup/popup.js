@@ -63,14 +63,19 @@ function createDiscoverCard(cd, isInstalled) {
         <div class="cd-meta">${escHtml(cd.id)} · v${escHtml(cd.version || "1.0.0")}</div>
         <div class="cd-desc">${escHtml(cd.description || "")}</div>
       </div>
-      <button class="btn-install ${isInstalled ? "installed" : ""}" ${isInstalled ? "disabled" : ""}>
-        ${isInstalled ? "Installed" : "Install"}
-      </button>
+      <div class="cd-card-btns">
+        <button class="btn-install ${isInstalled ? "installed" : ""}" ${isInstalled ? "disabled" : ""}>
+          ${isInstalled ? "Installed" : "Install"}
+        </button>
+        ${isInstalled ? `<button class="btn-remove-discover" title="Remove">×</button>` : ""}
+      </div>
     </div>
   `;
 
+  const installBtn = card.querySelector(".btn-install");
+
   if (!isInstalled) {
-    card.querySelector(".btn-install").addEventListener("click", async (e) => {
+    installBtn.addEventListener("click", async (e) => {
       const btn = e.currentTarget;
       btn.textContent = "Installing…";
       btn.disabled = true;
@@ -80,15 +85,36 @@ function createDiscoverCard(cd, isInstalled) {
         if (res.error) throw new Error(res.error);
         btn.textContent = "Installed";
         btn.classList.add("installed");
+        // Add remove button after install
+        const removeBtn = document.createElement("button");
+        removeBtn.className = "btn-remove-discover";
+        removeBtn.title = "Remove";
+        removeBtn.textContent = "×";
+        btn.insertAdjacentElement("afterend", removeBtn);
+        attachRemoveHandler(removeBtn, cd, btn);
       } catch (err) {
         btn.textContent = "Failed";
         btn.disabled = false;
         console.error(err);
       }
     });
+  } else {
+    attachRemoveHandler(card.querySelector(".btn-remove-discover"), cd, installBtn);
   }
 
   return card;
+}
+
+function attachRemoveHandler(removeBtn, cd, installBtn) {
+  removeBtn.addEventListener("click", async () => {
+    removeBtn.disabled = true;
+    const res = await send("UNINSTALL_CD", { id: cd.id });
+    if (res.error) { removeBtn.disabled = false; return; }
+    removeBtn.remove();
+    installBtn.textContent = "Install";
+    installBtn.classList.remove("installed");
+    installBtn.disabled = false;
+  });
 }
 
 // ─── Registry controls ────────────────────────────────────────────────────────

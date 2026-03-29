@@ -156,6 +156,24 @@ button:disabled {
 
 .btn-remove:hover { color: #f38ba8; }
 
+.cd-card-btns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.btn-remove-discover {
+  background: none;
+  color: #585b70;
+  padding: 4px 7px;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.btn-remove-discover:hover { color: #f38ba8; }
+
 /* ── CD Cards ─────────────────────────────────────────────────────────── */
 
 .cd-list {
