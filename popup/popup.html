@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CD-driver</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <span class="logo">CD-driver</span>
+    <div class="tabs">
+      <button class="tab active" data-tab="discover">Discover</button>
+      <button class="tab" data-tab="my-cds">My CDs</button>
+    </div>
+  </div>
+
+  <!-- Discover Tab -->
+  <div id="discover" class="tab-panel">
+    <div class="search-row">
+      <input id="search-input" type="text" placeholder="Search CDs…" />
+      <button id="search-btn">Search</button>
+    </div>
+    <div class="registry-row">
+      <input id="registry-url" type="text" placeholder="Registry URL (GitHub raw)" />
+      <button id="refresh-btn">Refresh</button>
+    </div>
+    <div id="registry-list" class="cd-list">
+      <div class="empty">Enter a registry URL and click Refresh, or use the built-in CDs.</div>
+    </div>
+  </div>
+
+  <!-- My CDs Tab -->
+  <div id="my-cds" class="tab-panel hidden">
+    <div id="installed-list" class="cd-list"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "CD-driver",
+  "version": "1.0.0",
+  "description": "A modular CD package runner for the browser",
+  "permissions": ["storage", "scripting", "downloads", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "CD-driver"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "exported_at": "2026-03-29T00:41:37.000Z",
+  "rows": 11,
+  "data": [
+    {
+      "Task": "Make a chrom extention core",
+      "Prompt": "Make an chrome extention that can has constant scripts that can import library, connect it to script, do what ever it need, and can be removable",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "Done",
+      "AI Note": "Test task completed via /update-task endpoint"
+    },
+    {
+      "Task": "Invent CD package",
+      "Prompt": "These library/package must be light-ware and named it CD, the chrom extention named it CD-driver, So I guess you get the idea behind the structure",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "Done",
+      "AI Note": "Added Home/End (go to row start/end) and Ctrl+Home/End (go to first/last cell) shortcuts"
+    },
+    {
+      "Task": "Access to cds",
+      "Prompt": "I want push all of packages in my github as a source that the chrome extention can read new packages from it, import it by button, download it then use it. REMEMBER THE CHROME EXTENTION SHOULD HAVE PACKAGE,LIBRARY, CD IN DEFALUT",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "Directory structure",
+      "Prompt": "Make two directory cd-drive and cd-list",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "CD structure",
+      "Prompt": "All cds must have same structure, due to this I guess for start two function for GetData() and RunCd() is good.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "GetData in detail",
+      "Prompt": "We gonna build generall chrome extention to do so many things and every cd chould be act as another chrome extention. I guss must of the chrome extentions have an functionally for getData and then after that do whatever they with that data.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "RunCD",
+      "Prompt": "After getData it must do something with that data in action.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "Example of functionality",
+      "Prompt": "For example I want to download youtube thumbnail from youtube like, I must be in the youtube page that I want the push the GetData button that let extention to get all data they need, such as url link, and then push the runCd to download the thumbnail.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "UI search page",
+      "Prompt": "For UI,make it simple as first, a search page that I can search package{name:thumbnail_downloader, ID:cd#z23s}, see the latest in list, import it, it must download the CD and put it in directory that can be use.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "UI saved cds page",
+      "Prompt": "And after import I want another page that I can use whatever I have in my local like thumbnail_downloader",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "Claude instruction",
+      "Prompt": "Make an instruction for yourself that makes it easier and less token for make another CD and main core.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    }
+  ]
+}

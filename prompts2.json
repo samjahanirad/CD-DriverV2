@@ -1,0 +1,30 @@
+{
+  "exported_at": "2026-03-29T00:53:51.098Z",
+  "rows": 2,
+  "data": [
+    {
+      "Task": "Cd comes from",
+      "Prompt": "Cd must be in github https://github.com/samjahanirad/CD-List , and the chrome extention must be empty",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    },
+    {
+      "Task": "Thumbnail downloader",
+      "Prompt": "Also the thumbnail downloader gives me Data ready: null , fix it or make a cd that works.",
+      "@Refrens": "",
+      "D": "",
+      "E": "",
+      "F": "",
+      "G": "",
+      "H": "",
+      "Status": "None",
+      "AI Note": ""
+    }
+  ]
+}
